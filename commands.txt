@@ -1,0 +1,16 @@
+./build/examples/openpose/openpose.bin --net_resolution="-1x128"
+
+
+Uninstall nvidia driver
+sudo apt-get remove --purge '^nvidia-.*'
+
+Cuda Toolkit
+sudo apt install nvidia-cuda-toolkit
+
+
+
+./build/examples/openpose/openpose.bin --net_resolution="-1x128" --write_json .data/keypoints --image_dir .data/images
+
+
+
+./build/examples/openpose/openpose.bin --video examples/media/running_full.mp4 --net_resolution="-1x128" --write_json output_json_folder/
